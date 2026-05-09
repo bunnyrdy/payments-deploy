@@ -1,11 +1,11 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: payments
+  name: payment
   namespace: roboshop
 spec:
   selector: # labels are used as selectors
-    app: payments
+    app: payment
     tier: app
     project: roboshop
       

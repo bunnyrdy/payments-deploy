@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: payments
+  name: payment
   namespace: roboshop
   labels:
-    app: payments
+    app: payment
     tier: app
     project: roboshop
     
@@ -12,22 +12,22 @@ spec:
   replicas: {{ .Values.deployment.replicas }}
   selector:
     matchLabels:
-      app: payments
+      app: payment
       tier: app
       project: roboshop
   template:
     metadata:
       labels:
-        app: payments
+        app: payment
         tier: app
         project: roboshop
     spec:
       containers:
-      - name: payments
+      - name: payment
         image: {{ .Values.deployment.imageURL }}:{{ .Values.deployment.imageVersion }}
         envFrom:
         - configMapRef:
-            name: payments
+            name: payment
         
 
 

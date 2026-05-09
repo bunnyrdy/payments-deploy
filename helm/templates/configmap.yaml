@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: payments
+  name: payment
   namespace: roboshop
   labels:
-    app: payments
+    app: payment
     project: roboshop
     tier: app
 data:
